@@ -1,0 +1,46 @@
+---
+import TestimonialCard from "./TestimonialCard.astro";
+
+const testimonials = [
+  {
+    text: "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
+    person: "Emily R.",
+    position: "Marketing Director",
+    image: "/assets/image-emily.jpg",
+  },
+  {
+    text: "Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjotable experience.",
+    person: "Thomas S.",
+    position: "Chief Operator Officer",
+    image: "/assets/image-thomas.jpg",
+  },
+  {
+    text: "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+    person: "Jennie F.",
+    position: "Business Owner",
+    image: "/assets/image-jennie.jpg",
+  },
+];
+---
+
+<section class="h-full sm:h-[520px] bg-white w-full text-center p-10 sm:p-20">
+  <h3
+    class="text-4xl sm:text-2xl text-neutral-dark-grayish-blue font-headings font-extrabold uppercase tracking-widest"
+  >
+    Client Testimonials
+  </h3>
+  <div
+    class="flex flex-col sm:flex-row items-center justify-center space-y-20 sm:space-y-0 sm:space-x-12 mt-20"
+  >
+    {
+      testimonials.map((testimonial) => (
+        <TestimonialCard
+          avatar={testimonial.image}
+          person={testimonial.person}
+          position={testimonial.position}
+          text={testimonial.text}
+        />
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,44 @@
+---
+import InfoCard from "./InfoCard.astro";
+---
+
+<main class="max-w-full min-h-screen flex flex-wrap">
+  <section class="w-full flex flex-col-reverse sm:flex-row items-center">
+    <InfoCard
+      title="Transform your brand"
+      paragraph="We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you."
+    />
+    <div class="w-full sm:w-[50%] h-full sm:h-full">
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          src="assets/desktop/image-transform.jpg"
+        />
+        <img
+          class="object-cover w-full h-full"
+          src="assets/mobile/image-transform.jpg"
+          alt="image transform"
+        />
+      </picture>
+    </div>
+  </section>
+  <section class="w-full sm:h-[580px] flex flex-col sm:flex-row items-center">
+    <div class="w-full sm:w-[50%] h-full sm:h-full">
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          src="assets/desktop/image-stand-out.jpg"
+        />
+        <img
+          class="object-cover w-full h-full"
+          src="assets/mobile/image-stand-out.jpg"
+          alt="image transform"
+        />
+      </picture>
+    </div>
+    <InfoCard
+      title="Stand out to the right audience"
+      paragraph="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places."
+    />
+  </section>
+</main>

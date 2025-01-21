@@ -1,0 +1,20 @@
+---
+const options: string[] = ["About", "Services", "Projects", "Contact"];
+---
+
+<header class="w-full flex items-center justify-between">
+  <div>
+    <img src="/assets/logo.svg" alt="logo of sunnyside" />
+  </div>
+  <ul class="flex items-center space-x-8 text-white">
+    {
+      options.map((option) => (
+        <li
+          class={`${option === "Contact" ? "cursor-pointer px-6 py-3 font-headings uppercase text-sm text-neutral-very-dark-desaturated-blue font-bold bg-white rounded-full shadow-sm transition-colors duration-300 hover:bg-white hover:bg-opacity-20 hover:text-white" : "text-white cursor-pointer font-semibold tracking-wide"}`}
+        >
+          {option}
+        </li>
+      ))
+    }
+  </ul>
+</header>

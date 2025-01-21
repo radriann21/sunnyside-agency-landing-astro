@@ -1,0 +1,37 @@
+---
+interface Props {
+  avatar: string;
+  person: string;
+  position: string;
+  text: string;
+}
+
+const { avatar, person, position, text } = Astro.props;
+---
+
+<article
+  class="text-center flex flex-col items-center justify-center space-y-10 sm:space-y-8"
+>
+  <div class="avatar">
+    <div class="w-32 sm:w-16 rounded-full">
+      <img src={avatar} alt="" />
+    </div>
+  </div>
+  <p
+    class="w-[80%] text-neutral-very-dark-grayish-blue font-semibold text-center font-body leading-10 sm:leading-5 text-2xl sm:text-sm"
+  >
+    {text}
+  </p>
+  <div class="flex flex-col space-y-4 sm:space-y-2">
+    <span
+      class="font-headings text-neutral-very-dark-desaturated-blue font-extrabold text-lg sm:text-base"
+    >
+      {person}
+    </span>
+    <span
+      class="font-body text-neutral-grayish-blue sm:text-sm font-semibold text-lg"
+    >
+      {position}
+    </span>
+  </div>
+</article>
