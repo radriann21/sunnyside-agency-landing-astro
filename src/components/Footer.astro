@@ -1,7 +1,44 @@
 ---
 import Logo from "./icons/Logo.astro";
+
+const options: string[] = ["About", "Services", "Projects"];
 ---
 
-<footer class="h-[230px] bg-[#66c6b3] p-12 flex items-center justify-center">
+<footer
+  class="h-[280px] bg-[#66c6b3] p-12 flex flex-col space-y-8 items-center justify-center"
+>
   <Logo />
+  <ul
+    class="w-fit flex items-center justify-center space-x-8 text-primary-dark-blue font-semibold text-xl"
+  >
+    {
+      options.map((option) => (
+        <li class="cursor-pointer transition-colors duration-200 hover:text-white">
+          {option}
+        </li>
+      ))
+    }
+  </ul>
+  <ul class="w-fit flex items-center justify-center space-x-8 mt-10">
+    <img
+      class="cursor-pointer transition-colors duration-200 w-8 h-8"
+      src="/assets/icon-facebook.svg"
+      alt="facebook icon"
+    />
+    <img
+      class="cursor-pointer transition-colors duration-200 w-8 h-8"
+      src="/assets/icon-instagram.svg"
+      alt="instagram icon"
+    />
+    <img
+      class="cursor-pointer transition-colors duration-200 w-8 h-8"
+      src="/assets/icon-twitter.svg"
+      alt="twitter icon"
+    />
+    <img
+      class="cursor-pointer transition-colors duration-200 w-8 h-8"
+      src="/assets/icon-pinterest.svg"
+      alt="pinterest icon"
+    />
+  </ul>
 </footer>
