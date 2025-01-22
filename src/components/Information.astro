@@ -3,12 +3,12 @@ import InfoCard from "./InfoCard.astro";
 ---
 
 <main class="max-w-full min-h-screen flex flex-wrap">
-  <section class="w-full flex flex-col-reverse sm:flex-row items-center">
+  <section class="w-full flex flex-col-reverse lg:flex-row items-center">
     <InfoCard
       title="Transform your brand"
       paragraph="We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you."
     />
-    <div class="w-full sm:w-[50%] h-full sm:h-full">
+    <div class="w-full lg:w-[50%] h-full sm:h-full">
       <picture>
         <source
           media="(min-width: 768px)"
@@ -22,8 +22,8 @@ import InfoCard from "./InfoCard.astro";
       </picture>
     </div>
   </section>
-  <section class="w-full sm:h-[580px] flex flex-col sm:flex-row items-center">
-    <div class="w-full sm:w-[50%] h-full sm:h-full">
+  <section class="w-full lg:h-[580px] flex flex-col lg:flex-row items-center">
+    <div class="w-full lg:w-[50%] h-full sm:h-full">
       <picture>
         <source
           media="(min-width: 768px)"
@@ -40,5 +40,41 @@ import InfoCard from "./InfoCard.astro";
       title="Stand out to the right audience"
       paragraph="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places."
     />
+  </section>
+  <section class="w-full lg:h-[580px] flex flex-col lg:flex-row items-center">
+    <article
+      class="w-full lg:w-[50%] h-[520px] sm:h-full bg-graphic-design-mobile sm:bg-graphic-design-desktop bg-no-repeat bg-cover bg-center flex items-end justify-center p-16 text-center"
+    >
+      <div>
+        <h3
+          class="text-3xl font-headings font-extrabold text-primary-dark-desaturated-cyan"
+        >
+          Graphic Design
+        </h3>
+        <p
+          class="font-semibold w-[70%] text-primary-dark-desaturated-cyan mx-auto mt-2 text-lg"
+        >
+          Great design makes you memorable. We deliver artwork that underscores
+          your brand message and captures potential clients's attention.
+        </p>
+      </div>
+    </article>
+    <article
+      class="w-full lg:w-[50%] h-[520px] sm:h-full bg-photography-mobile sm:bg-photography-desktop bg-no-repeat bg-cover bg-center flex items-end justify-center p-16 text-center"
+    >
+      <div>
+        <h3
+          class="text-3xl font-headings font-extrabold text-primary-dark-blue"
+        >
+          Photography
+        </h3>
+        <p
+          class="font-semibold w-[60%] text-primary-dark-blue mx-auto mt-2 text-lg"
+        >
+          Increase your credibility by getting the most stunning, high-quality
+          photos that improve your business image.
+        </p>
+      </div>
+    </article>
   </section>
 </main>

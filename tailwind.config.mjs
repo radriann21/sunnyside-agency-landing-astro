@@ -27,6 +27,8 @@ export default {
 				'hero-mobile': 'url("/assets/mobile/image-header.jpg")',
 				'photography-desktop': 'url("/assets/desktop/image-photography.jpg")',
 				'photography-mobile': 'url("/assets/mobile/image-photography.jpg")',
+				'graphic-design-desktop': 'url("/assets/desktop/image-graphic-design.jpg")',
+				'graphic-design-mobile': 'url("/assets/mobile/image-graphic-design.jpg")',
 			}
 		},
 	},
