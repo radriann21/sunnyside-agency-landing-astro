@@ -2,15 +2,26 @@
 const options: string[] = ["About", "Services", "Projects", "Contact"];
 ---
 
-<header class="w-full flex items-center justify-between">
+<header class="w-full flex items-center justify-between relative">
   <div>
     <img src="/assets/logo.svg" alt="logo of sunnyside" />
   </div>
-  <ul class="flex items-center space-x-8 text-white">
+  <button id="menuBtn" class="block sm:hidden">
+    <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg"
+      ><path
+        d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
+        fill="#FFF"
+        fill-rule="evenodd"></path></svg
+    >
+  </button>
+  <ul
+    class="top-0 absolute bg-white sm:bg-transparent flex flex-col sm:relative sm:flex-row items-center space-y-12 sm:space-y-0 sm:space-x-8 w-full sm:w-fit -translate-y-full opacity-0 sm:opacity-100 sm:translate-y-0 p-12 sm:p-0 transition-transform duration-200 ease-in-out"
+    id="menu"
+  >
     {
       options.map((option) => (
         <li
-          class={`${option === "Contact" ? "cursor-pointer px-6 py-3 font-headings uppercase text-sm text-neutral-very-dark-desaturated-blue font-bold bg-white rounded-full shadow-sm transition-colors duration-300 hover:bg-white hover:bg-opacity-20 hover:text-white" : "text-white cursor-pointer font-semibold tracking-wide"}`}
+          class={`${option === "Contact" ? "cursor-pointer px-8 py-6 sm:px-6 sm:py-3 font-headings uppercase sm:text-sm text-neutral-very-dark-desaturated-blue font-bold sm:bg-white bg-primary-custom-yellow rounded-full shadow-sm transition-colors duration-300 hover:bg-white hover:bg-opacity-20 hover:text-white text-2xl" : "text-neutral-dark-grayish-blue sm:text-white cursor-pointer font-semibold tracking-wide text-3xl sm:text-base"}`}
         >
           {option}
         </li>
@@ -18,3 +29,18 @@ const options: string[] = ["About", "Services", "Projects", "Contact"];
     }
   </ul>
 </header>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+
+  menuBtn?.addEventListener("click", () => {
+    if (menu?.classList.contains("-translate-y-full")) {
+      menu.classList.remove("-translate-y-full", "opacity-0");
+      menu.classList.add("translate-y-20");
+    } else {
+      menu?.classList.remove("translate-y-0");
+      menu?.classList.add("-translate-y-full", "opacity-0");
+    }
+  });
+</script>

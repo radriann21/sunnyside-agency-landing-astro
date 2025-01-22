@@ -2,9 +2,10 @@
 interface Props {
   title: string;
   paragraph: string;
+  bgColor: string;
 }
 
-const { title, paragraph } = Astro.props;
+const { title, paragraph, bgColor } = Astro.props;
 ---
 
 <article
@@ -22,9 +23,13 @@ const { title, paragraph } = Astro.props;
       {paragraph}
     </p>
     <button
-      class="font-headings text-3xl sm:text-base uppercase text-neutral-very-dark-desaturated-blue font-extrabold"
+      class="font-headings text-3xl sm:text-base uppercase text-neutral-very-dark-desaturated-blue font-extrabold relative"
     >
-      Learn More
+      <span class="relative z-10">Learn More</span>
+      <div
+        class={`absolute h-[6px] w-full rounded-full bottom-[2px] z-0 ${bgColor}`}
+      >
+      </div>
     </button>
   </div>
 </article>
